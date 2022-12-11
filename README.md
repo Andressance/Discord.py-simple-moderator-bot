@@ -8,7 +8,7 @@ IMPORTANT:
 
 -You must change some values in the bot code, guild (server) ID and the bot token. 
 
--All in the code is specified whith comments about what does every line.
+-All in the code is specified with comments about what does every line.
 
 -Feel free to use it in all servers you want.
 --------------------------------------------------------------------
