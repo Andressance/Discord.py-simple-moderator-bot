@@ -26,7 +26,10 @@ class abot(discord.Client):
             await tree.sync(guild=discord.Object(id=0000)) # Introduce the id of the server where you want the bot to be, in int format
         self.synced = True
         print("Bot is online") 
-    status = cycle([""]) # Introduce the status you want, The bot will appear playing the status
+        status = cycle([""]) # Introduce the status you want, The bot will appear playing the status
+        while True:
+            await bot.change_presence(activity=discord.Game(next(status))) # If you added more than one activity to the list will pass to the mext item
+            await asyncio.sleep(5) # Time the bot will wait until he changes the activity
 
 bot = abot() # We create the bot with the class abot
 tree = app_commands.CommandTree(bot) 
